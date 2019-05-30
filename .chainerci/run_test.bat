@@ -13,4 +13,4 @@ pip install -e .[test] -vvv
 pip install scipy
 
 set CUPY_TEST_GPU_LIMIT=1
-xpytest --python python -m "not slow" --thread 8 tests/**/test_*.py
+xpytest --python python -m "not slow" --thread 8 --hint .chainerci/hint.pbtxt tests/**/test_*.py

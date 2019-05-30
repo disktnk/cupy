@@ -1,0 +1,29 @@
+# hint.pbtxt is a config file for xpytest.
+#
+# Proto type: xpytest.proto.HintFile
+# https://github.com/chainer/xpytest/blob/master/proto/test_case.proto
+
+# Too flaky tests.  Retry up to 8+
+rules { name: "cupy_tests\\core_tests\\test_ndarray_adv_indexing.py" deadline: 360 retry: 8 }
+
+# Slow tests take 60+ seconds
+rules { name: "cupy_tests\\core_tests\\test_fusion.py" deadline: 360 }
+rules { name: "cupy_tests\\core_tests\\test_ndarray_adv_indexing.py" deadline: 240 }
+rules { name: "cupy_tests\\core_tests\\test_ndarray_elementwise_op.py" deadline: 360 }
+rules { name: "cupy_tests\\core_tests\\test_ndarray_reduction.py" deadline: 240 }
+rules { name: "cupy_tests\\core_tests\\test_ndarray_scatter.py" deadline: 240 }
+rules { name: "cupy_tests\\creation_tests\\test_from_data.py" deadline: 240 }
+rules { name: "cupy_tests\\indexing_tests\\test_insert.py" deadline: 240 }
+rules { name: "cupy_tests\\linalg_tests\\test_einsum.py" deadline: 240 }
+rules { name: "cupy_tests\\logic_tests\\test_comparison.py" deadline: 240 }
+rules { name: "cupy_tests\\logic_tests\\test_truth.py" deadline: 240 }
+rules { name: "cupy_tests\\math_tests\\test_arithmetic.py" deadline: 360 }
+rules { name: "cupy_tests\\math_tests\\test_matmul.py" deadline: 240 }
+rules { name: "cupy_tests\\math_tests\\test_misc.py" deadline: 240 }
+rules { name: "cupy_tests\\math_tests\\test_sumprod.py" deadline: 240 }
+rules { name: "cupy_tests\\math_tests\\test_trigonometric.py" deadline: 240 }
+rules { name: "cupy_tests\\random_tests\\test_distributions.py" deadline: 360 }
+rules { name: "cupy_tests\\sorting_tests\\test_search.py" deadline: 240 }
+rules { name: "cupy_tests\\statics_tests\\test_meanvar.py" deadline: 240 }
+rules { name: "cupy_tests\\statics_tests\\test_order.py" deadline: 240 }
+rules { name: "cupyx_tests\\scipy_tests\\ndimage_tests\\test_interpolation.py" deadline:240 }
